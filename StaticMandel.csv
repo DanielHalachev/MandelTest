@@ -1,0 +1,25 @@
+p;g;output1;output2;output3
+1;1;;Total time elapsed (in millis): 29321;Total time elapsed (in millis): 29319;Total time elapsed (in millis): 29371
+1;4;;Total time elapsed (in millis): 29337;Total time elapsed (in millis): 29320;Total time elapsed (in millis): 29368
+1;16;;Total time elapsed (in millis): 30498;Total time elapsed (in millis): 29346;Total time elapsed (in millis): 29390
+2;1;;Total time elapsed (in millis): 15297;Total time elapsed (in millis): 15535;Total time elapsed (in millis): 15368
+2;4;;Total time elapsed (in millis): 15305;Total time elapsed (in millis): 15372;Total time elapsed (in millis): 15041
+2;16;;Total time elapsed (in millis): 15228;Total time elapsed (in millis): 15230;Total time elapsed (in millis): 15128
+4;1;;Total time elapsed (in millis): 13227;Total time elapsed (in millis): 13188;Total time elapsed (in millis): 13366
+4;4;;Total time elapsed (in millis): 8275;Total time elapsed (in millis): 8187;Total time elapsed (in millis): 8241
+4;16;;Total time elapsed (in millis): 7831;Total time elapsed (in millis): 7845;Total time elapsed (in millis): 8069
+8;1;;Total time elapsed (in millis): 8361;Total time elapsed (in millis): 8095;Total time elapsed (in millis): 8203
+8;4;;Total time elapsed (in millis): 4752;Total time elapsed (in millis): 4801;Total time elapsed (in millis): 4746
+8;16;;Total time elapsed (in millis): 4306;Total time elapsed (in millis): 4171;Total time elapsed (in millis): 4241
+12;1;;Total time elapsed (in millis): 6025;Total time elapsed (in millis): 5942;Total time elapsed (in millis): 5884
+12;4;;Total time elapsed (in millis): 3303;Total time elapsed (in millis): 3352;Total time elapsed (in millis): 3341
+12;16;;Total time elapsed (in millis): 3239;Total time elapsed (in millis): 3048;Total time elapsed (in millis): 3032
+16;1;;Total time elapsed (in millis): 4568;Total time elapsed (in millis): 4560;Total time elapsed (in millis): 4657
+16;4;;Total time elapsed (in millis): 2981;Total time elapsed (in millis): 2688;Total time elapsed (in millis): 2793
+16;16;;Total time elapsed (in millis): 2589;Total time elapsed (in millis): 2605;Total time elapsed (in millis): 2665
+24;1;;Total time elapsed (in millis): 3494;Total time elapsed (in millis): 3557;Total time elapsed (in millis): 3615
+24;4;;Total time elapsed (in millis): 2699;Total time elapsed (in millis): 2632;Total time elapsed (in millis): 2659
+24;16;;Total time elapsed (in millis): 2570;Total time elapsed (in millis): 2545;Total time elapsed (in millis): 2493
+32;1;;Total time elapsed (in millis): 2966;Total time elapsed (in millis): 2965;Total time elapsed (in millis): 3125
+32;4;;Total time elapsed (in millis): 2414;Total time elapsed (in millis): 2426;Total time elapsed (in millis): 2511
+32;16;;Total time elapsed (in millis): 2356;Total time elapsed (in millis): 2430;Total time elapsed (in millis): 2392
