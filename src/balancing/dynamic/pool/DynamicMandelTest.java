@@ -17,11 +17,12 @@ import java.util.concurrent.TimeUnit;
 
 public class DynamicMandelTest {
 
-    protected static int WIDTH = 2160;
+    protected static int WIDTH = 3840;
     protected static int HEIGHT = 2160;
     protected static int MAX_ITERATIONS = 1024;
     protected static int[] PALETTE = new int[MAX_ITERATIONS];
-    protected static double[] DIMENSIONS = {-1.8, 0.45, -1.1, 1.1};
+//    protected static double[] DIMENSIONS = {-1.8, 0.45, -1.1, 1.1};
+    protected static double[] DIMENSIONS = {-2.50, 1.30, -1.1, 1.1};
     protected static int[][] PIXEL_ARRAY;
     protected static int NUMBER_OF_THREADS = 1;
     protected static int GRANULARITY = 1;
