@@ -134,7 +134,7 @@ public class StaticMandelTest {
                     image.setRGB(x, y, PALETTE[PIXEL_ARRAY[x][y]]);
                     continue;
                 }
-                image.setRGB(x, y, Color.WHITE.getRGB());
+                image.setRGB(x, y, Color.BLACK.getRGB());
             }
         }
 

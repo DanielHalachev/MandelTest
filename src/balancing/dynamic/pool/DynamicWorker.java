@@ -16,22 +16,31 @@ public class DynamicWorker implements java.lang.Runnable {
         this.taskLocation = taskLocation;
     }
 
-    private Complex calcNewValue(Complex z, Complex c) {
+    private Complex calculateNextIteration(Complex z, Complex c) {
         return z.multiply(z).add(c);
     }
 
-    private short getIndex(Complex c) {
+    private int getIteration(final Complex c) {
         Complex z = new Complex(0, 0);
-
-        short currentIteration = -128;
-
+        int currentIteration = 0;
         while (z.abs() <= CONVERGENCE_LIMIT && currentIteration < DynamicMandelTest.MAX_ITERATIONS) {
-            z = calcNewValue(z, c);
+            z = calculateNextIteration(z, c);
             currentIteration++;
         }
-
         return currentIteration;
     }
+//    private short getIndex(Complex c) {
+//        Complex z = new Complex(0, 0);
+//
+//        short currentIteration = -128;
+//
+//        while (z.abs() <= CONVERGENCE_LIMIT && currentIteration < DynamicMandelTest.MAX_ITERATIONS) {
+//            z = calcNewValue(z, c);
+//            currentIteration++;
+//        }
+//
+//        return currentIteration;
+//    }
 
     @Override
     public void run() {
@@ -43,7 +52,7 @@ public class DynamicWorker implements java.lang.Runnable {
                 double pixel_y = DynamicMandelTest.DIMENSIONS[Y_MIN_POS] + ((double) y / (DynamicMandelTest.HEIGHT)) * (DynamicMandelTest.DIMENSIONS[Y_MAX_POS] - DynamicMandelTest.DIMENSIONS[Y_MIN_POS]);
                 Complex c = new Complex(pixel_x, pixel_y);
 
-                DynamicMandelTest.PIXEL_ARRAY[x][y] = (byte) getIndex(c);
+                DynamicMandelTest.PIXEL_ARRAY[x][y] = getIteration(c);
             }
         }
     }

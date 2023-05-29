@@ -17,17 +17,17 @@ import java.util.concurrent.TimeUnit;
 
 public class DynamicMandelTest {
 
-    protected static int WIDTH = 3840;
+    protected static int WIDTH = 2160;
     protected static int HEIGHT = 2160;
     protected static int MAX_ITERATIONS = 1024;
     protected static int[] PALETTE = new int[MAX_ITERATIONS];
     protected static double[] DIMENSIONS = {-1.8, 0.45, -1.1, 1.1};
-    protected static byte[][] PIXEL_ARRAY;
+    protected static int[][] PIXEL_ARRAY;
     protected static int NUMBER_OF_THREADS = 1;
     protected static int GRANULARITY = 1;
     protected static int NUMBER_OF_TASKS;
     protected static int TASK_WIDTH;
-    protected static String PATH = "Mandelbrot.png";
+    protected static String PATH = "DynamicMandel.png";
 
     protected static long getTimeInMillis() {
         return System.currentTimeMillis();
@@ -77,7 +77,8 @@ public class DynamicMandelTest {
         }
         NUMBER_OF_TASKS = GRANULARITY * NUMBER_OF_THREADS;
         PALETTE = new int[MAX_ITERATIONS];
-        TASK_WIDTH = (int) Math.ceil((float) HEIGHT / NUMBER_OF_TASKS);
+        TASK_WIDTH = (int) Math.ceil((double) HEIGHT / NUMBER_OF_TASKS);
+        PIXEL_ARRAY = new int[WIDTH][HEIGHT];
     }
 
 
@@ -90,18 +91,16 @@ public class DynamicMandelTest {
         }
 
         for (int i = 0; i < MAX_ITERATIONS; i++) {
-            PALETTE[i] = Color.HSBtoRGB((200f + i * 2f) / 256f, 1, i / (i + 8f));
+            PALETTE[i] = Color.HSBtoRGB(((94 + 1.2f * (float) Math.log(i) * (float) Math.sqrt(i)) / 256f), 0.65f, i / (i + 3.5f));
         }
 
-        PALETTE[127] = Color.BLACK.getRGB();
-
-        BufferedImage bi = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
-        Graphics2D g2d = bi.createGraphics();
+        BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
+        Graphics2D g2d = image.createGraphics();
         g2d.fillRect(0, 0, WIDTH, HEIGHT);
 
         long startTime = getTimeInMillis();
 
-        ExecutorService pool = Executors.newFixedThreadPool(NUMBER_OF_THREADS - 1);
+        ExecutorService pool = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
         DynamicWorker[] tasks = new DynamicWorker[NUMBER_OF_TASKS];
         for (int i = 0; i < NUMBER_OF_TASKS; i++) {
@@ -121,17 +120,18 @@ public class DynamicMandelTest {
 
         long endTime = getTimeInMillis();
 
-        for (int x = 0; x < WIDTH; x++) {
-            for (int y = 0; y < HEIGHT; y++) {
-                if (PIXEL_ARRAY[x][y] < 0) {
-                    PIXEL_ARRAY[x][y] += 128;
+        for (int x = 0; x < WIDTH; ++x) {
+            for (int y = 0; y < HEIGHT; ++y) {
+                if (PIXEL_ARRAY[x][y] < MAX_ITERATIONS) {
+                    image.setRGB(x, y, PALETTE[PIXEL_ARRAY[x][y]]);
+                    continue;
                 }
-                bi.setRGB(x, y, PALETTE[PIXEL_ARRAY[x][y]]);
+                image.setRGB(x, y, Color.BLACK.getRGB());
             }
         }
 
         try {
-            ImageIO.write(bi, "PNG", new File(PATH));
+            ImageIO.write(image, "PNG", new File(PATH));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -95,7 +95,7 @@ public final class StaticWorker implements Runnable {
     @Override
     public void run() {
         if (!quiet) {
-            System.out.println("Thread-" + index + " started.");
+//            System.out.println("Thread-" + index + " started.");
         }
         long startTime = System.currentTimeMillis();
 
@@ -107,7 +107,7 @@ public final class StaticWorker implements Runnable {
 
         if (!quiet) {
             long endTime = System.currentTimeMillis();
-            System.out.println("Thread-" + index + " finished. Execution time was (millis): " + (endTime - startTime));
+//            System.out.println("Thread-" + index + " finished. Execution time was (millis): " + (endTime - startTime));
         }
     }
 }
