@@ -32,7 +32,7 @@ for g in "${g_values[@]}"; do
     for i in {1..3}; do
       # Execute the Java program and capture the output
       echo "p=$p;g=$g;i=$i"
-      output=$(java -cp lib/commons-cli-1.5.0.jar:lib/commons-math3-3.6.1.jar:src balancing.dynamic.DynamicMandelTest -p "$p" -g "$g")
+      output=$(java -cp lib/commons-cli-1.5.0.jar:lib/commons-math3-3.6.1.jar:src balancing.dynamic.DynamicMandelTest -q -p "$p" -g "$g")
       
       # Wait for the previous instance to halt completely
       wait
