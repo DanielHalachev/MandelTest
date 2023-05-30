@@ -1,4 +1,4 @@
-package balancing.dynamic.executor;
+package balancing.dynamic;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -8,12 +8,13 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.math3.complex.Complex;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class ThreadPoolMandelTest {
+public class DynamicMandelTest {
 
     private static final int CONVERGENCE_LIMIT = 2;
     private static final int X_MIN_POS = 0;
@@ -21,21 +22,21 @@ public class ThreadPoolMandelTest {
     private static final int Y_MIN_POS = 2;
     private static final int Y_MAX_POS = 3;
 
-    protected static int WIDTH = 2160;
+    protected static int WIDTH = 3840;
     protected static int HEIGHT = 2160;
     protected static int ROWS = 40;
     protected static int COLS = 1;
     protected static int NUMBER_OF_THREADS = 1;
     protected static int NUMBER_OF_TASKS = 1;
     protected static int GRANULARITY = 1;
-    protected static double[] DIMENSIONS = {-1.8, 0.45, -1.1, 1.1};
+    protected static double[] DIMENSIONS = {-2.50, 1.30, -1.1, 1.1};
     protected static int MAX_ITERATIONS = 1024;
     protected static int[] PALETTE = new int[MAX_ITERATIONS];
     protected static int[][] PIXEL_ARRAY = new int[WIDTH][HEIGHT];
     protected static boolean IS_QUIET = false;
     protected static boolean BY_COLS = false;
 
-    protected static String PATH = "ThreadPoolMandel.png";
+    protected static String PATH = "DynamicMandel.png";
     protected static int numFinishedTasks = 0;
 
     protected static synchronized void count() {
@@ -143,7 +144,7 @@ public class ThreadPoolMandelTest {
         }
 
         for (int i = 0; i < MAX_ITERATIONS; i++) {
-            PALETTE[i] = Color.HSBtoRGB((176 + 0.5f * i) / 256, 0.65f, i / (i + 3.5f));
+            PALETTE[i] = Color.HSBtoRGB(((94 + 1.2f * (float) Math.log(i) * (float) Math.sqrt(i)) / 256f), 0.65f, i / (i + 3.5f));
         }
 
         BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
@@ -152,13 +153,13 @@ public class ThreadPoolMandelTest {
 
         long startTime = getTimeInMillis();
 
-        ThreadPoolBase threadPool = new ThreadPoolBase(NUMBER_OF_THREADS - 1, NUMBER_OF_TASKS);
+        ThreadPoolBase threadPool = new ThreadPoolBase(NUMBER_OF_THREADS, NUMBER_OF_TASKS);
 
-        int div = NUMBER_OF_TASKS;
-        int partRows = HEIGHT / div + (HEIGHT % div == 0 ? 0 : 1);
-        int partCols = WIDTH / div + (WIDTH % div == 0 ? 0 : 1);
+        int divisor = NUMBER_OF_TASKS;
+        int partRows = HEIGHT / divisor + (HEIGHT % divisor == 0 ? 0 : 1);
+        int partCols = WIDTH / divisor + (WIDTH % divisor == 0 ? 0 : 1);
         final int part = BY_COLS ? partCols : partRows;
-        for (int k = 0; k < div; ++k) {
+        for (int k = 0; k < divisor; ++k) {
             final int kk = k * part;
             threadPool.execute(() -> {
                 if (BY_COLS) {
@@ -188,7 +189,7 @@ public class ThreadPoolMandelTest {
         for (int x = 0; x < WIDTH; ++x) {
             for (int y = 0; y < HEIGHT; ++y) {
                 if (PIXEL_ARRAY[x][y] == MAX_ITERATIONS) {
-                    image.setRGB(x, y, Color.WHITE.getRGB());
+                    image.setRGB(x, y, Color.BLACK.getRGB());
                 } else {
                     image.setRGB(x, y, PALETTE[PIXEL_ARRAY[x][y]]);
                 }

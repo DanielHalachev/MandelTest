@@ -1,8 +1,8 @@
-package balancing.dynamic.executor;
+package balancing.dynamic;
 
 import java.util.concurrent.BlockingQueue;
 
-public class Worker implements Runnable {
+public class DynamicWorker implements Runnable {
 
     private Thread thread = null;
     private final BlockingQueue<Runnable> taskQueue;
@@ -13,7 +13,7 @@ public class Worker implements Runnable {
         this.thread.interrupt();
     }
 
-    public Worker(BlockingQueue<Runnable> queue) {
+    public DynamicWorker(BlockingQueue<Runnable> queue) {
         this.taskQueue = queue;
         this.isStopped = false;
         this.countTasks = 0;

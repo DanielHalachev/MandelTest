@@ -1,4 +1,4 @@
-package balancing.dynamic.pool;
+package executor;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -15,20 +15,19 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class DynamicMandelTest {
+public class ExecutorServiceMandelTest {
 
     protected static int WIDTH = 3840;
     protected static int HEIGHT = 2160;
     protected static int MAX_ITERATIONS = 1024;
     protected static int[] PALETTE = new int[MAX_ITERATIONS];
-//    protected static double[] DIMENSIONS = {-1.8, 0.45, -1.1, 1.1};
     protected static double[] DIMENSIONS = {-2.50, 1.30, -1.1, 1.1};
     protected static int[][] PIXEL_ARRAY;
     protected static int NUMBER_OF_THREADS = 1;
     protected static int GRANULARITY = 1;
     protected static int NUMBER_OF_TASKS;
     protected static int TASK_WIDTH;
-    protected static String PATH = "DynamicMandel.png";
+    protected static String PATH = "ExecutorServiceMandel.png";
 
     protected static long getTimeInMillis() {
         return System.currentTimeMillis();
@@ -103,9 +102,9 @@ public class DynamicMandelTest {
 
         ExecutorService pool = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
-        DynamicWorker[] tasks = new DynamicWorker[NUMBER_OF_TASKS];
+        ExecutorServiceWorker[] tasks = new ExecutorServiceWorker[NUMBER_OF_TASKS];
         for (int i = 0; i < NUMBER_OF_TASKS; i++) {
-            tasks[i] = new DynamicWorker(i);
+            tasks[i] = new ExecutorServiceWorker(i);
         }
 
         for (int i = 0; i < NUMBER_OF_TASKS; i++) {

@@ -1,4 +1,4 @@
-package balancing.dynamic.executor;
+package balancing.dynamic;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.concurrent.BlockingQueue;
 public class ThreadPoolBase {
 
     private final BlockingQueue<Runnable> taskQueue;
-    private final List<Worker> workers = new ArrayList<>();
+    private final List<DynamicWorker> workers = new ArrayList<>();
     private boolean isStopped;
 
     public ThreadPoolBase(int allThreadsCount, int allTasksCount) {
@@ -16,9 +16,9 @@ public class ThreadPoolBase {
         this.isStopped = false;
 
         for (int i = 0; i < allThreadsCount; ++i) {
-            this.workers.add(new Worker(this.taskQueue));
+            this.workers.add(new DynamicWorker(this.taskQueue));
         }
-        for (Worker runnable : this.workers) {
+        for (DynamicWorker runnable : this.workers) {
             new Thread(runnable).start();
         }
     }
@@ -32,13 +32,13 @@ public class ThreadPoolBase {
 
     public synchronized void stop(boolean quiet) {
         this.isStopped = true;
-        for (Worker runnable : this.workers) {
+        for (DynamicWorker runnable : this.workers) {
             runnable.doStop(quiet);
         }
     }
 
     public synchronized void killThreads() {
-        for (Worker runnable : this.workers) {
+        for (DynamicWorker runnable : this.workers) {
             runnable.inter();
         }
     }
