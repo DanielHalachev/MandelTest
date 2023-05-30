@@ -1,0 +1,25 @@
+p;g;output1;output2;output3
+1;1;;Total execution time: 29401 ms.;Total execution time: 29403 ms.;Total execution time: 29384 ms.
+2;1;;Total execution time: 15167 ms.;Total execution time: 15153 ms.;Total execution time: 15153 ms.
+4;1;;Total execution time: 13376 ms.;Total execution time: 13468 ms.;Total execution time: 13443 ms.
+8;1;;Total execution time: 8078 ms.;Total execution time: 8071 ms.;Total execution time: 8151 ms.
+12;1;;Total execution time: 5990 ms.;Total execution time: 5889 ms.;Total execution time: 5887 ms.
+16;1;;Total execution time: 4675 ms.;Total execution time: 4671 ms.;Total execution time: 4628 ms.
+24;1;;Total execution time: 3504 ms.;Total execution time: 3386 ms.;Total execution time: 3454 ms.
+32;1;;Total execution time: 3167 ms.;Total execution time: 2953 ms.;Total execution time: 2971 ms.
+1;4;;Total execution time: 29252 ms.;Total execution time: 29263 ms.;Total execution time: 29282 ms.
+2;4;;Total execution time: 15179 ms.;Total execution time: 15189 ms.;Total execution time: 15097 ms.
+4;4;;Total execution time: 8122 ms.;Total execution time: 8091 ms.;Total execution time: 8106 ms.
+8;4;;Total execution time: 4613 ms.;Total execution time: 4620 ms.;Total execution time: 4679 ms.
+12;4;;Total execution time: 3264 ms.;Total execution time: 3373 ms.;Total execution time: 3286 ms.
+16;4;;Total execution time: 2693 ms.;Total execution time: 2778 ms.;Total execution time: 2733 ms.
+24;4;;Total execution time: 2508 ms.;Total execution time: 2517 ms.;Total execution time: 2491 ms.
+32;4;;Total execution time: 2452 ms.;Total execution time: 2464 ms.;Total execution time: 2457 ms.
+1;16;;Total execution time: 29490 ms.;Total execution time: 29378 ms.;Total execution time: 29381 ms.
+2;16;;Total execution time: 15205 ms.;Total execution time: 15056 ms.;Total execution time: 14994 ms.
+4;16;;Total execution time: 7847 ms.;Total execution time: 7846 ms.;Total execution time: 7885 ms.
+8;16;;Total execution time: 4146 ms.;Total execution time: 4194 ms.;Total execution time: 4164 ms.
+12;16;;Total execution time: 3002 ms.;Total execution time: 3002 ms.;Total execution time: 2985 ms.
+16;16;;Total execution time: 2569 ms.;Total execution time: 2508 ms.;Total execution time: 2542 ms.
+24;16;;Total execution time: 2393 ms.;Total execution time: 2400 ms.;Total execution time: 2385 ms.
+32;16;;Total execution time: 2372 ms.;Total execution time: 2354 ms.;Total execution time: 2377 ms.
