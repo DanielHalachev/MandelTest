@@ -23,8 +23,8 @@ g_values=(1 4 16)
 # javac -cp lib/commons-cli-1.5.0.jar:lib/commons-math3-3.6.1.jar src/balancing/constant/*
 
 # Iterate over p and g values
-for p in "${p_values[@]}"; do
-  for g in "${g_values[@]}"; do
+for g in "${g_values[@]}"; do
+  for p in "${p_values[@]}"; do
     # Create a variable to store all three outputs
     outputs=""
     
