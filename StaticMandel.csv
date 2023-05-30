@@ -1,25 +1,25 @@
-p;g;output1;output2;output3
-1;1;;Total time elapsed (in millis): 29321;Total time elapsed (in millis): 29319;Total time elapsed (in millis): 29371
-1;4;;Total time elapsed (in millis): 29337;Total time elapsed (in millis): 29320;Total time elapsed (in millis): 29368
-1;16;;Total time elapsed (in millis): 30498;Total time elapsed (in millis): 29346;Total time elapsed (in millis): 29390
-2;1;;Total time elapsed (in millis): 15297;Total time elapsed (in millis): 15535;Total time elapsed (in millis): 15368
-2;4;;Total time elapsed (in millis): 15305;Total time elapsed (in millis): 15372;Total time elapsed (in millis): 15041
-2;16;;Total time elapsed (in millis): 15228;Total time elapsed (in millis): 15230;Total time elapsed (in millis): 15128
-4;1;;Total time elapsed (in millis): 13227;Total time elapsed (in millis): 13188;Total time elapsed (in millis): 13366
-4;4;;Total time elapsed (in millis): 8275;Total time elapsed (in millis): 8187;Total time elapsed (in millis): 8241
-4;16;;Total time elapsed (in millis): 7831;Total time elapsed (in millis): 7845;Total time elapsed (in millis): 8069
-8;1;;Total time elapsed (in millis): 8361;Total time elapsed (in millis): 8095;Total time elapsed (in millis): 8203
-8;4;;Total time elapsed (in millis): 4752;Total time elapsed (in millis): 4801;Total time elapsed (in millis): 4746
-8;16;;Total time elapsed (in millis): 4306;Total time elapsed (in millis): 4171;Total time elapsed (in millis): 4241
-12;1;;Total time elapsed (in millis): 6025;Total time elapsed (in millis): 5942;Total time elapsed (in millis): 5884
-12;4;;Total time elapsed (in millis): 3303;Total time elapsed (in millis): 3352;Total time elapsed (in millis): 3341
-12;16;;Total time elapsed (in millis): 3239;Total time elapsed (in millis): 3048;Total time elapsed (in millis): 3032
-16;1;;Total time elapsed (in millis): 4568;Total time elapsed (in millis): 4560;Total time elapsed (in millis): 4657
-16;4;;Total time elapsed (in millis): 2981;Total time elapsed (in millis): 2688;Total time elapsed (in millis): 2793
-16;16;;Total time elapsed (in millis): 2589;Total time elapsed (in millis): 2605;Total time elapsed (in millis): 2665
-24;1;;Total time elapsed (in millis): 3494;Total time elapsed (in millis): 3557;Total time elapsed (in millis): 3615
-24;4;;Total time elapsed (in millis): 2699;Total time elapsed (in millis): 2632;Total time elapsed (in millis): 2659
-24;16;;Total time elapsed (in millis): 2570;Total time elapsed (in millis): 2545;Total time elapsed (in millis): 2493
-32;1;;Total time elapsed (in millis): 2966;Total time elapsed (in millis): 2965;Total time elapsed (in millis): 3125
-32;4;;Total time elapsed (in millis): 2414;Total time elapsed (in millis): 2426;Total time elapsed (in millis): 2511
-32;16;;Total time elapsed (in millis): 2356;Total time elapsed (in millis): 2430;Total time elapsed (in millis): 2392
+p,g,output1,output3,output4,min,S,E
+1,1,29321,29319,29371,29319,"1,00006821515058","1,00006821515058"
+2,1,15297,15535,15368,15297,"1,9167810681833","0,958390534091652"
+4,1,13227,13188,13366,13188,"2,22330906885047","0,555827267212618"
+8,1,8361,8095,8203,8095,"3,62211241507103","0,452764051883879"
+12,1,6025,5942,5884,5884,"4,9831747110809","0,415264559256741"
+16,1,4568,4560,4657,4560,"6,43004385964912","0,40187774122807"
+24,1,3494,3557,3615,3494,"8,39181453921007","0,349658939133753"
+32,1,2966,2965,3125,2965,"9,88903878583474","0,309032462057336"
+1,4,29337,29320,29368,29320,"1,00003410641201","1,00003410641201"
+2,4,15305,15372,15041,15041,"1,94940495977661","0,974702479888305"
+4,4,8275,8187,8241,8187,"3,58140955172835","0,895352387932087"
+8,4,4752,4801,4746,4746,"6,17804466919511","0,772255583649389"
+12,4,3303,3352,3341,3303,"8,87708144111414","0,739756786759512"
+16,4,2981,2688,2793,2688,"10,9081101190476","0,681756882440476"
+24,4,2699,2632,2659,2632,"11,1401975683891","0,464174898682877"
+32,4,2414,2426,2511,2414,"12,1462303231152","0,379569697597349"
+1,16,30498,29346,29390,29346,"0,999148095140735","0,999148095140735"
+2,16,15228,15230,15128,15128,"1,93819407720783","0,969097038603913"
+4,16,7831,7845,8069,7831,"3,74422168305453","0,936055420763632"
+8,16,4306,4171,4241,4171,"7,02972908175498","0,878716135219372"
+12,16,3239,3048,3032,3032,"9,67051451187335","0,805876209322779"
+16,16,2589,2605,2665,2589,"11,3252220934724","0,707826380842024"
+24,16,2570,2545,2493,2493,"11,7613317288408","0,490055488701698"
+32,16,2356,2430,2392,2356,"12,445246179966","0,388913943123939"

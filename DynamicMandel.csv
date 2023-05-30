@@ -1,25 +1,26 @@
-p;g;output1;output2;output3
-1;1;Total execution time: 29358 ms.;Total execution time: 29358 ms.;Total execution time: 29413 ms.
-1;4;Total execution time: 29298 ms.;Total execution time: 29348 ms.;Total execution time: 29308 ms.
-1;16;Total execution time: 29341 ms.;Total execution time: 29395 ms.;Total execution time: 32760 ms.
-2;1;Total execution time: 15068 ms.;Total execution time: 15179 ms.;Total execution time: 15082 ms.
-2;4;Total execution time: 15135 ms.;Total execution time: 15177 ms.;Total execution time: 15197 ms.
-2;16;Total execution time: 15127 ms.;Total execution time: 15016 ms.;Total execution time: 14948 ms.
-4;1;Total execution time: 13356 ms.;Total execution time: 13662 ms.;Total execution time: 13306 ms.
-4;4;Total execution time: 8145 ms.;Total execution time: 8168 ms.;Total execution time: 8236 ms.
-4;16;Total execution time: 7791 ms.;Total execution time: 7806 ms.;Total execution time: 8053 ms.
-8;1;Total execution time: 8150 ms.;Total execution time: 8048 ms.;Total execution time: 8177 ms.
-8;4;Total execution time: 4668 ms.;Total execution time: 4701 ms.;Total execution time: 4662 ms.
-8;16;Total execution time: 4187 ms.;Total execution time: 4110 ms.;Total execution time: 4169 ms.
-12;1;Total execution time: 5904 ms.;Total execution time: 5879 ms.;Total execution time: 5933 ms.
-12;4;Total execution time: 3269 ms.;Total execution time: 3284 ms.;Total execution time: 3248 ms.
-12;16;Total execution time: 3012 ms.;Total execution time: 3024 ms.;Total execution time: 2998 ms.
-16;1;Total execution time: 4697 ms.;Total execution time: 4755 ms.;Total execution time: 4658 ms.
-16;4;Total execution time: 2689 ms.;Total execution time: 2706 ms.;Total execution time: 2733 ms.
-16;16;Total execution time: 2525 ms.;Total execution time: 2492 ms.;Total execution time: 2582 ms.
-24;1;Total execution time: 3380 ms.;Total execution time: 3360 ms.;Total execution time: 3539 ms.
-24;4;Total execution time: 2478 ms.;Total execution time: 2467 ms.;Total execution time: 2497 ms.
-24;16;Total execution time: 2397 ms.;Total execution time: 2412 ms.;Total execution time: 2377 ms.
-32;1;Total execution time: 3359 ms.;Total execution time: 3106 ms.;Total execution time: 3257 ms.
-32;4;Total execution time: 2526 ms.;Total execution time: 2474 ms.;Total execution time: 2504 ms.
-32;16;Total execution time: 2364 ms.;Total execution time: 2365 ms.;Total execution time: 2334 ms.
+﻿p,g,output1,output2,output3,min,S,E
+1,1,29358,29358,29413,29358,1,1
+2,1,15068,15179,15082,8048,1.9397423191278493,0.62421330158190169
+4,1,13356,13662,13306,3360,3.7681940700808627,0.041751996723325822
+8,1,8150,8048,8177,15135,4.9937064126552135,4.5193965517241379
+12,1,5904,5879,5933,3248,10.917813313499442,0.083381616168501413
+16,1,4697,4755,4658,2474,12.350862431636516,0.30601651100733823
+24,1,3380,3360,3539,7791,1.0020479213598197,0.48709185027873642
+32,1,3359,3106,3257,2492,1.964008563018464,0.39391906397595533
+1,4,29298,29348,29308,15068,3.6478628230616303,0.96987115956392467
+2,4,15135,15177,15197,5879,9.0387931034482758,0.90981777612495351
+4,4,8145,8168,8236,3106,11.780898876404494,0.061375267594327002
+8,4,4668,4701,4662,8145,9.4520283322601415,2.9452247191011236
+12,4,3269,3284,3248,2689,1.0005793940220169,0.13789831654892529
+16,4,2689,2706,2733,29341,2.2063730647828046,8.7375000000000007
+24,4,2478,2467,2497,4110,6.2972972972972974,0.45055248618784532
+32,4,2526,2474,2504,2377,9.7925283522348234,0.49584515605999191
+1,16,29341,29395,32760,13306,8.7375000000000007,0.94204851752021568
+2,16,15127,15016,14948,4658,11.866612772837509,0.77192890197728226
+4,16,7791,7806,8053,29298,1.9483674011149457,3.6478628230616303
+8,16,4187,4110,4169,4662,3.6044198895027626,1.1815035415325177
+12,16,3012,3024,2998,2467,7.1430656934306569,0.26238738738738737
+16,16,2525,2492,2582,14948,6.3027050236152853,5.9333063864187547
+24,16,2397,2412,2377,2998,11.900283745439806,0.59525547445255478
+32,16,2364,2365,2334,2334,12.57840616966581,0.39307519280205655
+,,,,,,,
